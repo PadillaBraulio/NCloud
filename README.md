@@ -8,7 +8,9 @@ you also need to replace your public ip in the index.php file, exactly in the cu
 
 
 First executes the docker.sh
+
 Second executes the apache.sh
+
 Third executes the etcd.sh
 
 At this moment you will have ah etcd cluster, an mysql in docker and apache server installed in your machine.
@@ -16,16 +18,27 @@ so, now you need to put some dummy data and grant permission to connetct in your
 
 
 sudo docker exec -t -i mysql2 /bin/bash
+
+mysql -u root -p         the password is 123
+
 create database dummy; 
+
 use dummy;
-CREATE TABLE dummy ( dummy int );
+
+create table dummy ( dummy int );
+
 insert into dummy values (1);  
-insert into dummy values (2);  
-insert into dummy values (3);  
+
+insert into dummy values (2); 
+
+insert into dummy values (3); 
+
 insert into dummy values (4);  
+
 GRANT ALL ON *.* to root@'%' IDENTIFIED BY '123';
 
-put the **index.php** in /var/www/html/ folder and restart the apache server with **sudo systemctl restart apache2**
+
+copy the **index.php** in /var/www/html/ folder and restart the apache server with **sudo systemctl restart apache2**
 
 launch the following command **curl -L -X PUT http://xxx.xxx.xxx.xxx:5005/v2/keys/message -d value="yyy.yyy.yyy.yyyy"** where the xxx represents your public ip and yyy represents the public ip of the mysql instance, in this case xxx and yyy are the same ip.
 
