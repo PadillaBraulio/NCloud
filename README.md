@@ -2,9 +2,29 @@
 This is an exercise from NCloud, to create the ectd server, install mysql, an apache2, you need to create a ec2 machine in aws, with the ubuntu 16.04 ami, and run the file init.sh.
 
 You need to asign an security group that has open the ports 8005,8006,8007,5005,5006,5007,80,22 in order to function correctly.
+**
+Copy the public ip of your ec2 instance and replace it in the etcd.sh, exaclty in export PUBLIC_IP= xxx.xxx.xxx.xxx, put your public ip.
+**
+First executes the docker.sh
+Second executes the apache.sh
+Third executes the etcd.sh
 
+At this moment you will have ah etcd cluster, an mysql in docker and apache server installed in your machine.
+so, now you need to put some dummy data and grant permission to connetct in your mysql instance.
 
+**
+sudo docker exec -t -i mysql2 /bin/bash
+create database dummy; 
+use dummy;
+CREATE TABLE dummy ( dummy int );
+insert into dummy values (1);  
+insert into dummy values (2);  
+insert into dummy values (3);  
+insert into dummy values (4);  
+GRANT ALL ON *.* to root@'%' IDENTIFIED BY '123';
+**
 
+put the **index.php** in /var/www/html/ folder and restart the apache server with **sudo systemctl restart apache2**
 
 
 ## What i make to solve it. 
