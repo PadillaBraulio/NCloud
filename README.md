@@ -35,7 +35,7 @@ insert into dummy values (3);
 
 insert into dummy values (4);  
 
-GRANT ALL ON *.* to root@'%' IDENTIFIED BY '123';
+GRANT ALL ON \*.\* to root@'%' IDENTIFIED BY '123';
 
 exit
 
