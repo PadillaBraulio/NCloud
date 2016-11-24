@@ -9,9 +9,9 @@ you also need to replace your public ip in the index.php file, exactly in the cu
 
 First executes the docker.sh
 
-Second executes the apache.sh
+After executes the apache.sh
 
-Third executes the etcd.sh
+After executes the etcd.sh
 
 At this moment you will have ah etcd cluster, an mysql in docker and apache server installed in your machine.
 so, now you need to put some dummy data and grant permission to connetct in your mysql instance.
@@ -42,6 +42,7 @@ copy the **index.php** in /var/www/html/ folder and restart the apache server wi
 
 launch the following command **curl -L -X PUT http://xxx.xxx.xxx.xxx:5005/v2/keys/message -d value="yyy.yyy.yyy.yyyy"** where the xxx represents your public ip and yyy represents the public ip of the mysql instance, in this case xxx and yyy are the same ip.
 
+And for last, open your browser and put XXX.XXX.XXX.XXX/index.php where xxx are your public ip, and you will get an apache connected to mysql instance by the etcd server.
 
 ## What i make to solve it. 
 
