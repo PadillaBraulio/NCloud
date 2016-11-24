@@ -1,5 +1,5 @@
 # NCloud
-This is an exercise from NCloud, to create the ectd server, install mysql, an apache2, you need to create a ec2 machine in aws, with the ubuntu 16.04 ami, and run the file init.sh.
+This is an exercise from NCloud, to create the ectd server, install mysql, an apache2, you need to create a ec2 machine in aws, with the ubuntu 16.04 ami.
 
 You need to asign an security group that has open the ports 8005,8006,8007,5005,5006,5007,80,22 in order to function correctly.
 
