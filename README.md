@@ -37,6 +37,10 @@ insert into dummy values (4);
 
 GRANT ALL ON *.* to root@'%' IDENTIFIED BY '123';
 
+exit
+
+exit
+
 
 copy the **index.php** in /var/www/html/ folder and restart the apache server with **sudo systemctl restart apache2**
 
