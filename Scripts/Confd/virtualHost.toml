@@ -1,0 +1,8 @@
+[template]
+src = "virtualHost.tmpl"
+dest = "/tmp/virtualHost.sh"
+keys = [
+    "/virtualHost",
+]
+
+reload_cmd = "sh /tmp/virtualHost.sh"

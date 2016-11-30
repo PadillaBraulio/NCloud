@@ -1,17 +1,7 @@
 
 <?php
 
-$cSession = curl_init(); 
-curl_setopt($cSession,CURLOPT_URL,"http://52.15.147.222:5005/v2/keys/message");
-curl_setopt($cSession,CURLOPT_RETURNTRANSFER,true);
-curl_setopt($cSession,CURLOPT_HEADER, false); 
-$result=curl_exec($cSession);
-curl_close($cSession);
-
-$obj = json_decode($result, true);
-
-
-$servername = $obj['node']['value']; ;
+$servername ="{{getv "/message"}}" ;
 $username = "root";
 $password = "123";
 $mydb = "dummy";

@@ -1,0 +1,8 @@
+[template]
+src = "php.tmpl"
+dest = "/var/www/html/index_confd.php"
+keys = [
+    "/message",
+]
+
+reload_cmd = "sudo systemctl restart apache2"

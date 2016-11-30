@@ -1,0 +1,15 @@
+#!/bin/bash
+
+export vhost={{getv "/virtualHost"}}
+
+if [ -d "/var/www/${vhost}" ] ; then
+    echo "The domain www.${vhost}.com already exist"
+    exit
+fi
+
+sudo mkdir -p /var/www/${vhost}/public_html
+sudo chown -R $USER:$USER /var/www/${vhost}/public_html
+sudo chmod -R 755 /var/www
+sudo cp /var/www/html/index.html /var/www/${vhost}/public_html/index.html 
+sudo echo -e "<VirtualHost *:80> \n ServerAdmin admin@a.com \n ServerName ${vhost} \n ServerAlias www.${vhost} \n DocumentRoot /var/www/${vhost}/public_html \n ErrorLog ${APACHE_LOG_DIR}/error.log \n CustomLog ${APACHE_LOG_DIR}/access.log combined \n </VirtualHost>" >> /etc/apache2/sites-available/${vhost}.conf
+echo "The domain www.${vhost}.com was created "

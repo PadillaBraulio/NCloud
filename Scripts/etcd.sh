@@ -1,5 +1,5 @@
 
-export PUBLIC_IP=54.191.254.133
+export PUBLIC_IP=52.15.147.222
 
 sudo docker run -d -p 8005:8005 -p 5005:5005 quay.io/coreos/etcd:v0.4.6 -peer-addr ${PUBLIC_IP}:8005 -addr ${PUBLIC_IP}:5005 -name etcd-node1
 
