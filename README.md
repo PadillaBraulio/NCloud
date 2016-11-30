@@ -72,6 +72,10 @@ if you want to change the ip address of the mysql server yo need to execute the 
 	
 its automatically will change the ip address of the confd_index.php stored in the apache server /var/www/html directory.
 
+and for last you need to execute the confd command to update all the configuration files.
+
+	**sudo confd -onetime -backend etcd -node http://127.0.0.1:5005**
+
 
 ## What i make to solve it. 
 
