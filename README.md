@@ -123,4 +123,4 @@ To be honest, I dont understood where to join it with the etcd cluster, so I onl
 To create the virtual host configuration I follow this tutorial  https://www.digitalocean.com/community/tutorials/como-configurar-virtual-host-de-apache-en-ubuntu-14-04-lts-es
 and it seems  work fine, but if you want try this, you need to modify your hosts file, and put a new entry with the public ip of the ec2  machine 54.191.254.133 and the hostname of www.exercise.com
 
-YES
+
