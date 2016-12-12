@@ -7,7 +7,7 @@ You need to asign an security group that has open the ports 8005,8006,8007,5005,
  Copy the public  ip of your ec2 instance and replace it in the etcd.sh, exaclty in export PUBLIC_IP= xxx.xxx.xxx.xxx, put your public ip.
 you also need to replace your public ip in the index.php file, exactly in the curl_setopt part 
 
-
+FSDFSDFSDFSDFSDFSDFS
 First executes the docker.sh
 
 After executes the apache.sh
