@@ -3,7 +3,7 @@
 This is an exercise from NCloud, to create the ectd server, install mysql, an apache2, you need to create a ec2 machine in aws, with the ubuntu 16.04 ami. **go to Confd section, to see how to implement it with confd, and how to create virtual hosts on more simple way**Ssss
 sdf
 You need to asign an security group that has open the sdfports 8005,8006,8007,5005,5006,5007,80,22 in order to function correctly.
-
+ss
  Copy the public  ip of your ec2 instance and replace it in the etcd.sh, exaclty in export PUBLIC_IP= xxx.xxx.xxx.xxx, put your public ip.
 you also need to replace your public ip in the index.php file, exactly in the curl_setopt part 
 
