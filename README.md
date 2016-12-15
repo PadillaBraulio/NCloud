@@ -1,4 +1,4 @@
-# NCloud
+# NClouds
 
 This is an exercise from NCloud, to create the ectd server, install mysql, an apache2, you need to create a ec2 machine in aws, with the ubuntu 16.04 ami. **go to Confd section, to see how to implement it with confd, and how to create virtual hosts on more simple way**Ssss
 sdf
